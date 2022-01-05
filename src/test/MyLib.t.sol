@@ -2,9 +2,10 @@
 pragma solidity 0.8.10;
 
 import "ds-test/test.sol";
+import {MyLib} from "../MyLib.sol";
 
-contract ContractTest is DSTest {
+contract MyLibTest is DSTest {
     function testSum() public {
-        assertTrue(1 + 2 == 3);
+        assertEq(MyLib.sum(1, 2), 3);
     }
 }
